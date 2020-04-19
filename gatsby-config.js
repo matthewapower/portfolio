@@ -1,8 +1,11 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Matthew A Power`,
+    description: `Designer & Developer based in Atlanta, GA.`,
+    author: `@matthewapower`,
+    social: {
+      twitter: 'matthewapower'
+    }
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -18,13 +21,29 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `matthewapower`,
+        short_name: `mpower`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#000000`,
+        theme_color: `#000000`,
         display: `minimal-ui`,
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+      },
+    },
+    `gatsby-theme-blog`,
+    {
+      resolve: `gatsby-remark-images`,
+      options: {
+        backgroundColor: 'white',
+        tracedSVG: { color: "#F00", turnPolicy: "TURNPOLICY_MAJORITY" },
+        quality: 100
+      },
+    },
+    "gatsby-plugin-theme-ui",
+    {
+      resolve: `gatsby-theme-tailwindcss`,
+      options: {
+        postCssPlugins: [require("autoprefixer")],
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

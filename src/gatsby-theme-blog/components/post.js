@@ -5,9 +5,7 @@ import { MDXRenderer } from "gatsby-plugin-mdx"
 
 import Layout from "gatsby-theme-blog/src/components/layout"
 import SEO from "gatsby-theme-blog/src/components/seo"
-import PostTitle from "gatsby-theme-blog/src/components/post-title"
-import PostDate from "gatsby-theme-blog/src/components/post-date"
-import PostFooter from "gatsby-theme-blog/src/components/post-footer"
+import PostFooter from "./post-footer"
 
 import tw from "tailwind.macro"
 import styled from "@emotion/styled"
@@ -43,9 +41,8 @@ const Post = ({
       description={post.excerpt}
       keywords={post.keywords}
     />
-    <main className="border border-black">
-      <PostTitle>{post.title}</PostTitle>
-      <PostDate>{post.date}</PostDate>
+    <main className="border border-black rounded mb-12">
+      <h1 className="p-4 border-black border-b uppercase">{post.title}</h1>
       <MDXProvider components={components}>
         <MDXRenderer>{post.body}</MDXRenderer>
       </MDXProvider>

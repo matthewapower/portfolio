@@ -43,7 +43,7 @@ const Post = ({
       description={post.excerpt}
       keywords={post.keywords}
     />
-    <main>
+    <main className="border border-black">
       <PostTitle>{post.title}</PostTitle>
       <PostDate>{post.date}</PostDate>
       <MDXProvider components={components}>

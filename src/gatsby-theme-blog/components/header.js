@@ -1,6 +1,8 @@
 import React from "react"
 import { Link } from "gatsby"
-import { css, Styled } from "theme-ui"
+import { css } from "theme-ui"
+
+import logo from "../../images/logo.svg"
 
 export default () => {
 
@@ -13,7 +15,7 @@ export default () => {
         pt: 4,
       })}
     >
-      <Link to="/"><Styled.h1>MATTHEWAPOWER</Styled.h1></Link>
+      <Link to="/"><img src={logo} alt="" className="w-64"/></Link>
     </header>
   )
 }

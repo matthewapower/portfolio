@@ -42,7 +42,16 @@ const Post = ({
       keywords={post.keywords}
     />
     <main className="border border-black rounded mb-12">
-      <h1 className="p-4 border-black border-b uppercase">{post.title}</h1>
+      <div className="border-black border-b flex items-center justify-between">
+        <h1 className="p-4 uppercase mb-0">{post.title}</h1>
+        <ul className="mb-0 flex">
+          {post.tags ? post.tags.map((tag, i) => {
+            return (
+              <li className="mb-0 mr-8 uppercase text-xs list-disc">{tag}</li>
+            )
+          }) : ''}
+        </ul>
+      </div>
       <MDXProvider components={components}>
         <MDXRenderer>{post.body}</MDXRenderer>
       </MDXProvider>

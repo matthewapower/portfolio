@@ -39,6 +39,14 @@ module.exports = {
         quality: 100
       },
     },
+    {
+      resolve: 'gatsby-plugin-web-font-loader',
+      options: {
+        typekit: {
+          id: 'adh1nys'
+        }
+      }
+    },
     "gatsby-plugin-theme-ui",
     {
       resolve: `gatsby-theme-tailwindcss`,

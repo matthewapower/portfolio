@@ -3,3 +3,12 @@
 @tailwind components;
 
 @tailwind utilities;
+
+.flip:hover,
+a.flip:hover {
+  transform: scale(-1, 1);
+}
+
+.max-h-screen-50 {
+  max-height: 50vh;
+}

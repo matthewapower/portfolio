@@ -16,8 +16,8 @@ export default merge({}, baseTheme, {
     }
   },
   fonts: {
-    body: "system-ui, sans-serif",
-    heading: "system-ui, sans-serif",
+    body: 'neue-haas-grotesk-display, sans-serif',
+    heading: 'neue-haas-grotesk-display, sans-serif',
     monospace: "Menlo, monospace",
   },
   fontWeights: {

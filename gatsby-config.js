@@ -1,14 +1,9 @@
 module.exports = {
-  siteMetadata: {
-    title: `Matthew A Power`,
-    description: `Designer & Developer based in Atlanta, GA.`,
-    author: `@matthewapower`,
-    social: {
-      twitter: 'matthewapower'
-    }
-  },
   plugins: [
-    `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-theme-blog`,
+      options: {},
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -16,27 +11,10 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
     {
-      resolve: `gatsby-plugin-manifest`,
+      resolve: `gatsby-theme-tailwindcss`,
       options: {
-        name: `matthewapower`,
-        short_name: `mpower`,
-        start_url: `/`,
-        background_color: `#000000`,
-        theme_color: `#000000`,
-        display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
-      },
-    },
-    `gatsby-theme-blog`,
-    {
-      resolve: `gatsby-remark-images`,
-      options: {
-        backgroundColor: 'white',
-        tracedSVG: { color: "#F00", turnPolicy: "TURNPOLICY_MAJORITY" },
-        quality: 100
+        postCssPlugins: [require("autoprefixer")],
       },
     },
     {
@@ -47,15 +25,18 @@ module.exports = {
         }
       }
     },
-    "gatsby-plugin-theme-ui",
     {
-      resolve: `gatsby-theme-tailwindcss`,
+      resolve: `gatsby-remark-images`,
       options: {
-        postCssPlugins: [require("autoprefixer")],
+        backgroundColor: 'white',
+        quality: 100
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
   ],
+  // Customize your site metadata:
+  siteMetadata: {
+    title: `Matthew A Power`,
+    description: `Designer & Developer based in Atlanta, GA.`,
+    author: `@matthewapower`,
+  },
 }

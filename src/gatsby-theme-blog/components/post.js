@@ -3,7 +3,7 @@ import React from "react"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 
-import Layout from "gatsby-theme-blog/src/components/layout"
+import Layout from "./layout"
 import SEO from "gatsby-theme-blog/src/components/seo"
 import PostFooter from "./post-footer"
 
@@ -35,13 +35,13 @@ const Post = ({
   previous,
   next,
 }) => (
-  <Layout location={location} title={title}>
+  <Layout location={location} title={title} footer={false}>
     <SEO
       title={post.title}
       description={post.excerpt}
       keywords={post.keywords}
     />
-    <main className="border border-black rounded mb-12">
+    <main className="border border-black rounded font-body mb-12">
       <div className="border-black border-b flex items-center justify-between">
         <h1 className="p-4 uppercase mb-0">{post.title}</h1>
         <ul className="mb-0 flex">

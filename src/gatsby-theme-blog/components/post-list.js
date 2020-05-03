@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link, useStaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import styled from '@emotion/styled'
@@ -46,13 +46,16 @@ const PostList = () => {
     display: ${props => props.active ? 'block' : 'none'};
   `
 
-  if ( typeof window.orientation !== "undefined" && isMobile === false ) {
-    setIsMobile(true);
-  }
+  useEffect(() => {
+    if ( typeof window.orientation !== "undefined" && isMobile === false ) {
+      setIsMobile(true);
+    }
+  })
+  
 
 
   return (
-    <div className="w-full border border-black rounded">
+    <div className="w-full border border-black rounded font-body">
       {data.allMdx.nodes.map((node, i) => {
         const id = `link${i}`
         const active = (id === activeItem) ? true : false

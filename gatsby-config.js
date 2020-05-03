@@ -44,6 +44,12 @@ module.exports = {
         quality: 100
       },
     },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-97555760-1",
+      },
+    },
   ],
   // Customize your site metadata:
   siteMetadata: {

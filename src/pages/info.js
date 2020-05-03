@@ -28,15 +28,15 @@ const Info = () => {
         <div>
           <h1 className="text-xl mb-4 max-w-sm font-bold">Matthew Power is a designer and front-end developer from Atlanta, GA.</h1>
           <ul className="ml-0 flex font-body list-disc mb-0">
-            <li className="mx-4 mr-6 flip"><a href="https://www.are.na/matt-power" target="_blank">Are.na</a></li>
-            <li className="mx-4 mr-6 flip"><a href="https://github.com/matthewapower" target="_blank">Github</a></li>
-            <li className="mx-4 mr-6 flip"><a href="https://www.instagram.com/matthewapower/" target="_blank">Instagram</a></li>
+            <li className="mx-4 mr-6 flip"><a href="https://www.are.na/matt-power" target="_blank" rel="noopener noreferrer">Are.na</a></li>
+            <li className="mx-4 mr-6 flip"><a href="https://github.com/matthewapower" target="_blank" rel="noopener noreferrer">Github</a></li>
+            <li className="mx-4 mr-6 flip"><a href="https://www.instagram.com/matthewapower/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
             <li className="mx-4 mr-6 flip"><a href="mailto:matthewallenpower@gmail.com">Email</a></li>
           </ul>
         </div>
         <div className="font-body">
-          <p className="text-md mb-0 max-w-md">Currently: Lead Developer at <a href="https://gotowildplaces.com/" className="underline flip" target="_blank">OUST (Wild Places)</a></p>
-          <p className="text-md mb-0 max-w-md">Previously: Designer at <a href="https://www.polarnotion.com/" className="underline flip" target="_blank">Polar Notion</a></p>
+          <p className="text-md mb-0 max-w-md">Currently: Lead Developer at <a href="https://gotowildplaces.com/" className="underline flip" target="_blank" rel="noopener noreferrer">OUST (Wild Places)</a></p>
+          <p className="text-md mb-0 max-w-md">Previously: Designer at <a href="https://www.polarnotion.com/" className="underline flip" target="_blank" rel="noopener noreferrer">Polar Notion</a></p>
         </div>
         <a href="mailto:matthewallenpower@gmail.com" className="uppercase border border-black col-span-2 font-body rounded text-center flip hover:bg-gray-100 py-8">Email Me</a>
       </div>

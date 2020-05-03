@@ -21,6 +21,7 @@ const MyP = styled.p`
 `
 
 const components = {
+  h1: tw.h1`font-body md:max-w-lg`,
   p: MyP
 }
 

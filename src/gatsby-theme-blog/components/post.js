@@ -43,9 +43,9 @@ const Post = ({
       keywords={post.keywords}
     />
     <main className="border border-black rounded font-body mb-12">
-      <div className="border-black border-b flex items-center justify-between">
-        <h1 className="p-4 uppercase mb-0">{post.title}</h1>
-        <ul className="mb-0 flex">
+      <div className="border-black border-b flex flex-col md:flex-row items-center justify-between">
+        <h1 className="p-4 uppercase mb-0 text-center md:text-left">{post.title}</h1>
+        <ul className="mb-4 md:mb-0 flex">
           {post.tags ? post.tags.map((tag, i) => {
             return (
               <li className="mb-0 mr-8 uppercase text-xs list-disc">{tag}</li>

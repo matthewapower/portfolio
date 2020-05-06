@@ -44,8 +44,8 @@ const PostList = () => {
     ${tw`fixed inset-0`}
     z-index: -1;
     position: fixed !important;
-    filter: blur(10px);
-    display: ${props => props.active ? 'block' : 'none'};
+    // filter: blur(10px);
+    opacity: ${props => props.active ? '1' : '0'};
   `
 
   useEffect(() => {
@@ -53,28 +53,25 @@ const PostList = () => {
       setIsMobile(true);
     }
 
-    // get height of page
-    // get the length from the center of the screen from the top and bottom of the page.
-    // divide section height of page by length of the posts
-    // set card active based on scroll position
+    // TODO: Scroll interaction
 
-    if (isMobile === true) {
-      let screenH = document.documentElement.clientHeight
-      let pageH = document.documentElement.scrollHeight
-      let cases = data.allMdx.nodes
-      let triggerLength = pageH - screenH - 40
-      let hotspotH = triggerLength / cases.length
+    // if (isMobile === true) {
+    //   let screenH = document.documentElement.clientHeight
+    //   let pageH = document.documentElement.scrollHeight
+    //   let cases = data.allMdx.nodes
+    //   let triggerLength = pageH - screenH - 40
+    //   let hotspotH = triggerLength / cases.length
       
-      cases.forEach((c,i) => {
-        let offestY = (screenH / 2)
-        let minY = (hotspotH * (i + 1)) + offestY
-        let maxY = minY + hotspotH
+    //   cases.forEach((c,i) => {
+    //     let offestY = (screenH / 2)
+    //     let minY = (hotspotH * (i + 1)) + offestY
+    //     let maxY = minY + hotspotH
 
-        if ((scrollY + offestY) > minY && (scrollY + offestY) <= maxY) {
-          setActiveItem('link' + i)
-        }
-      })
-    }
+    //     if ((scrollY + offestY) > minY && (scrollY + offestY) <= maxY) {
+    //       activeItem === 'link' + i ? console.Log('its already set') : setActiveItem('link' + i)
+    //     }
+    //   })
+    // }
   }, [isMobile, data.allMdx.nodes, scrollY])
   
 
@@ -84,8 +81,8 @@ const PostList = () => {
       <div className="w-full border border-black rounded font-body">
         {data.allMdx.nodes.map((node, i) => {
           const id = `link${i}`
-          const active = (id === activeItem) ? true : false
-          const menuFocused = (activeItem !== false) ? true : false
+          const active = id === activeItem
+          const menuFocused = activeItem !== false
 
           return (
             <Link

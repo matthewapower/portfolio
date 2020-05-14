@@ -22,7 +22,7 @@ const MyP = styled.p`
 
 const components = {
   h1: tw.h1`font-body font-medium mx-4 lg:mx-64`,
-  h2: tw.h2`font-body mx-4 lg:mx-64`,
+  h2: tw.h2`font-body font-medium mx-4 lg:mx-64`,
   ul: tw.ul`list-disc mx-4 lg:mx-64 pl-6`,
   a: tw.a`underline text-blue`,
   p: MyP
@@ -56,7 +56,7 @@ const Post = ({
           }) : ''}
         </ul>
       </div>
-      <div className="my-12">
+      <div className="my-12 md:my-32">
         <MDXProvider components={components}>
           <MDXRenderer>{post.body}</MDXRenderer>
         </MDXProvider>

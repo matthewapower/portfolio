@@ -5,7 +5,11 @@ module.exports = {
       display: ['neue-haas-grotesk-display', 'sans-serif'],
       body: ['neue-haas-grotesk-display', 'sans-serif']
     },
-    extend: {},
+    extend: {
+      colors: {
+        blue: 'blue'
+      }
+    },
   },
   variants: {},
   plugins: [],

@@ -11,7 +11,7 @@ import tw from "tailwind.macro"
 import styled from "@emotion/styled"
 
 const MyP = styled.p`
-  ${tw`lg:mx-64`}
+  ${tw`mx-4 lg:mx-64`}
 
   @media (min-width: 1024px){
     .gatsby-resp-image-wrapper {
@@ -21,7 +21,10 @@ const MyP = styled.p`
 `
 
 const components = {
-  h1: tw.h1`font-body md:max-w-lg`,
+  h1: tw.h1`font-body font-medium mx-4 lg:mx-64`,
+  h2: tw.h2`font-body mx-4 lg:mx-64`,
+  ul: tw.ul`list-disc mx-4 lg:mx-64 pl-6`,
+  a: tw.a`underline text-blue`,
   p: MyP
 }
 
@@ -53,9 +56,11 @@ const Post = ({
           }) : ''}
         </ul>
       </div>
-      <MDXProvider components={components}>
-        <MDXRenderer>{post.body}</MDXRenderer>
-      </MDXProvider>
+      <div className="my-12">
+        <MDXProvider components={components}>
+          <MDXRenderer>{post.body}</MDXRenderer>
+        </MDXProvider>
+      </div>
     </main>
     <PostFooter {...{ previous, next }} />
   </Layout>

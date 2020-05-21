@@ -25,12 +25,12 @@ const Info = () => {
       </div>
       <Img fluid={data.file.childImageSharp.fluid} className="rounded mb-4 md:mb-0 md:col-span-2 max-h-screen-50"/>
       <div>
-        <h1 className="text-xl mb-4 w-full max-w-sm font-bold mb-4 md:mb-0">Matthew Power is a designer and front-end developer from Atlanta, GA.</h1>
+        <h1 className="text-xl mb-4 w-full max-w-sm font-bold mb-4">Matthew Power is a full stack designer from Atlanta, GA.</h1>
         <ul className="ml-0 grid grid-cols-2 md:flex flex-row font-body list-disc mb-0">
           <li className="mx-4 mr-6 flip"><a href="https://www.are.na/matt-power" target="_blank" rel="noopener noreferrer">Are.na</a></li>
           <li className="mx-4 mr-6 flip"><a href="https://github.com/matthewapower" target="_blank" rel="noopener noreferrer">Github</a></li>
-          <li className="mx-4 mr-6 flip"><a href="https://www.instagram.com/matthewapower/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
-          <li className="mx-4 mr-6 flip"><a href="mailto:matthewallenpower@gmail.com">Email</a></li>
+          <li className="mx-4 mr-6 flip"><a href="https://www.linkedin.com/in/matthewapower/" target="_blank" rel="noopener noreferrer">Linkedin</a></li>
+          <li className="mx-4 mr-6 flip"><a href="https://dribbble.com/matthewapower" target="_blank" rel="noopener noreferrer">dribbble</a></li>
         </ul>
       </div>
       <div className="font-body mb-4 md:mb-0">

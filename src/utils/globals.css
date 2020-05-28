@@ -6,7 +6,7 @@
 
 .flip:hover,
 a.flip:hover {
-  transform: scale(-1, 1);
+  transform: scale(1, -1);
 }
 
 .max-h-screen-50 {

@@ -11,7 +11,7 @@ const PostList = () => {
   const {scrollY} = useScroll()
   const data = useStaticQuery(graphql`
     query IndexQuery {
-      allMdx {
+      allMdx(sort: {fields: frontmatter___title, order: ASC}) {
         nodes {
           frontmatter {
             featuredImage {
@@ -33,7 +33,7 @@ const PostList = () => {
   `)
 
   const Title = styled.h2`
-    ${tw`p-4`}
+    ${tw`p-4 font-light`}
     font-size: 5vw;
     text-transform: uppercase;
     margin: 0;
@@ -44,7 +44,7 @@ const PostList = () => {
     ${tw`fixed inset-0`}
     z-index: -1;
     position: fixed !important;
-    // filter: blur(10px);
+    filter: blur(10px);
     opacity: ${props => props.active ? '1' : '0'};
   `
 

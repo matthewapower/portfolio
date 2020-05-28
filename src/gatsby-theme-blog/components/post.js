@@ -21,8 +21,8 @@ const MyP = styled.p`
 `
 
 const components = {
-  h1: tw.h1`font-body font-medium mx-4 lg:mx-64`,
-  h2: tw.h2`font-body font-medium mx-4 lg:mx-64`,
+  h1: tw.h1`font-body font-medium mx-4 lg:mx-64 text-center`,
+  h2: tw.h2`font-body font-medium mx-4 lg:mx-64 text-center`,
   ul: tw.ul`list-disc mx-4 lg:mx-64 pl-6`,
   a: tw.a`underline text-blue`,
   p: MyP
@@ -45,9 +45,9 @@ const Post = ({
       description={post.excerpt}
       keywords={post.keywords}
     />
-    <main className="border border-black rounded font-body mb-12">
+    <main className="border border-black rounded font-body mb-12 mt-12">
       <div className="border-black border-b flex flex-col md:flex-row items-center justify-between">
-        <h1 className="p-4 uppercase mb-0 text-center md:text-left">{post.title}</h1>
+        <h1 className="text-2xl md:text-5xl font-light p-4 uppercase mb-0 text-center md:text-left">{post.title}</h1>
         <ul className="mb-4 md:mb-0 flex">
           {post.tags ? post.tags.map((tag, i) => {
             return (

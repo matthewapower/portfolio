@@ -20,7 +20,7 @@ const Info = () => {
 
   return (
     <div className="p-4 md:grid md:grid-cols-2 gap-8">
-      <div className="flex flex-wrap items-center justify-between md:col-span-2 mb-4 md:mb-0">
+      <div className="flex items-center justify-between md:col-span-2 mb-4 md:mb-0">
         <Link to="/" ><img src={logo} className="w-2/3 md:w-full max-w-xs mb-0" alt="Matthew A Power"/></Link>
         <Link to="/" className="font-body uppercase border border-black rounded-full px-4 h-16 md:h-20 w-16 md:w-20 flex items-center justify-center py-2 hover:bg-gray-100 flip">Work</Link>
       </div>

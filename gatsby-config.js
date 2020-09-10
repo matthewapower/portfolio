@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env`,
+})
+
 module.exports = {
   plugins: [
     {
@@ -30,18 +34,27 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-web-font-loader',
+      resolve: "gatsby-plugin-web-font-loader",
       options: {
         typekit: {
-          id: 'adh1nys'
-        }
-      }
+          id: "adh1nys",
+        },
+      },
     },
     {
       resolve: `gatsby-remark-images`,
       options: {
-        backgroundColor: 'white',
-        quality: 100
+        backgroundColor: "white",
+        quality: 100,
+      },
+    },
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: process.env.CONTENTFUL_SPACE_ID,
+        // Learn about environment variables: https://gatsby.dev/env-vars
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+        host: process.env.CONTENTFUL_HOST,
       },
     },
     {
